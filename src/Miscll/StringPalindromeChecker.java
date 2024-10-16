@@ -1,3 +1,5 @@
+package Miscll;
+
 public class StringPalindromeChecker {
     public static void main(String[] args) {
         String str = "rerer";

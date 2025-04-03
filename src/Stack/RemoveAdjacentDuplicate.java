@@ -20,4 +20,5 @@ public class RemoveAdjacentDuplicate {
         }
         return result.reverse().toString();
     }
+
 }

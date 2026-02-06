@@ -5,13 +5,14 @@ import java.util.Stack;
 public class SimplifyPath {
     public static void main(String[] args) {
 
-        String str = "/../";  // op --> "/a/b/c"
-        System.out.println(simplifyPath(str));
+        String str = "/home/user/Documents/../Pictures";  // op --> "/a/b/c"
+        System.out.println("Simplfy path shoul be : '/home/user/Pictures' and answer is: " + simplifyPath(str) );
 
     }
     public static String simplifyPath(String path){
         Stack<String> stringStack =  new Stack<>();
-        for(String str : path.split("/")){
+        String [] splitStr = path.split("/");
+        for(String str : splitStr){
             if(str.equals("..") && !stringStack.isEmpty()){
                 stringStack.pop();
             }else if(!str.equals("") || !str.equals("."))
